@@ -13,13 +13,25 @@ class DiceCollectionViewController: UICollectionViewController{
     
     
     var diceHolder : Dictionary<String,Die> = Dictionary()
-    
+    var oldLayout: UICollectionViewLayout?
+    var newLayout: UICollectionViewLayout?
     
     
     override func viewDidLoad() {
         let plusButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(plusButtonTapped))
-            
+        let swapButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: #selector(swapButtonTapped))
+        
+        let newFlowLayout = UICollectionViewFlowLayout()
+        newFlowLayout.minimumInteritemSpacing = 20
+        newFlowLayout.minimumLineSpacing = 20
+        oldLayout = self.collectionView?.collectionViewLayout
+        newLayout = newFlowLayout
+
+        
+        self.collectionView?.collectionViewLayout = newFlowLayout
         navigationItem.rightBarButtonItem = plusButton
+        
+        
     }
     
     func plusButtonTapped(){
@@ -27,8 +39,19 @@ class DiceCollectionViewController: UICollectionViewController{
         newDie.name = "Allen\(self.diceHolder.count)"
         newDie.rollIt()
         diceHolder[newDie.name!] = newDie
-    
+        self.collectionView?.reloadData()
     }
     
+    func swapButtonTapped(){
+        if self.collectionView?.collectionViewLayout == oldLayout{
+            self.collectionView?.collectionViewLayout = newLayout!
+        }else{
+            self.collectionView?.collectionViewLayout = oldLayout!
+        }
+        }
+        
+
+        self.collectionView?.reloadData()
+    }
     
 }

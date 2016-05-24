@@ -13,11 +13,15 @@ extension DiceCollectionViewController{
     
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        
+        return self.diceHolder.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("dieCell", forIndexPath: indexPath)
         
+        cell.contentView.backgroundColor = .blueColor()
+        
+        return cell
     }
     
     
