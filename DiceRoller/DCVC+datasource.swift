@@ -24,13 +24,14 @@ extension DiceCollectionViewController{
         
         let label =  UILabel(frame: cell.bounds)
         label.text = String(selectedDie!.currentValue)
+        label.layer.cornerRadius = 20
+        label.layer.backgroundColor = .blueColor()
         label.textAlignment = .Center
         for subView in cell.contentView.subviews {
             subView.removeFromSuperview()
         }
         
         cell.contentView.addSubview(label)
-        cell.contentView.backgroundColor = .blueColor()
 
         
         return cell
