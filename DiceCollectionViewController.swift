@@ -30,6 +30,7 @@ class DiceCollectionViewController: UICollectionViewController{
         
         self.collectionView?.collectionViewLayout = newFlowLayout
         navigationItem.rightBarButtonItem = plusButton
+        self.navigationItem.leftBarButtonItem = swapButton
         
         
     }
@@ -48,9 +49,6 @@ class DiceCollectionViewController: UICollectionViewController{
         }else{
             self.collectionView?.collectionViewLayout = oldLayout!
         }
-        }
-        
-
         self.collectionView?.reloadData()
     }
     
