@@ -68,12 +68,12 @@ class DiceCollectionViewController: UICollectionViewController{
     }
     
     func swapButtonTapped(){
-        if self.collectionView?.collectionViewLayout == oldLayout{
-            self.collectionView?.collectionViewLayout = newLayout!
-        }else{
-            self.collectionView?.collectionViewLayout = oldLayout!
-        }
-        self.collectionView?.reloadData()
+//        if self.collectionView?.collectionViewLayout == oldLayout{
+//            self.collectionView?.collectionViewLayout = newLayout!
+//        }else{
+//            self.collectionView?.collectionViewLayout = oldLayout
+//        }
+//        self.collectionView?.reloadData()
     }
     
 }
