@@ -23,9 +23,11 @@ extension DiceCollectionViewController{
         let selectedDie = self.diceHolder[keyArray[indexPath.row]]
         
         let label =  UILabel(frame: cell.bounds)
+        
         label.text = String(selectedDie!.currentValue)
-        label.layer.cornerRadius = 20
-        label.layer.backgroundColor = .blueColor()
+        label.layer.cornerRadius = 10
+        label.layer.borderWidth = 1
+        label.layer.borderColor = (UIColor.blackColor().CGColor)
         label.textAlignment = .Center
         for subView in cell.contentView.subviews {
             subView.removeFromSuperview()
@@ -38,5 +40,7 @@ extension DiceCollectionViewController{
     }
     
     
+    
+
     
 }
