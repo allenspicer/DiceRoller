@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreMotion
 
 class DiceCollectionViewController: UICollectionViewController{
     
@@ -15,6 +16,7 @@ class DiceCollectionViewController: UICollectionViewController{
     var diceHolder : Dictionary<String,Die> = Dictionary()
     var oldLayout: UICollectionViewLayout?
     var newLayout: UICollectionViewLayout?
+   // let motionManager: CMMotionManager = CMMotionManager?
     
     
     override func viewDidLoad() {
@@ -41,9 +43,12 @@ class DiceCollectionViewController: UICollectionViewController{
     
      override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
+            diceHolder.removeAll()
+            
             //map contents of cells
             //apply function to create random values
             //apply random values to mapped labels
+            self.collectionView?.reloadData()
         }
     }
     
