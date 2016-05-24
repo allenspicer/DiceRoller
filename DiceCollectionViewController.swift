@@ -48,10 +48,10 @@ class DiceCollectionViewController: UICollectionViewController{
             while (i < diceHolder.count){
             
                 let newDie = Die()
-            
-                newDie.name = "\(self.diceHolder.count)"
+                newDie.name = "\(i)"
                 newDie.rollIt()
-                diceHolder["i"] = newDie
+                diceHolder[newDie.name!] = newDie
+                
                 self.collectionView?.reloadData()
                 i = i+1
                 
