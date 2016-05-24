@@ -35,6 +35,20 @@ class DiceCollectionViewController: UICollectionViewController{
         
     }
     
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            //map contents of cells
+            //apply function to create random values
+            //apply random values to mapped labels
+        }
+    }
+    
+    
+    
     func plusButtonTapped(){
         let newDie = Die()
         newDie.name = "Allen\(self.diceHolder.count)"
