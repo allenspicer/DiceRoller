@@ -51,16 +51,9 @@ class DiceCollectionViewController: UICollectionViewController{
                 newDie.name = "\(i)"
                 newDie.rollIt()
                 diceHolder[newDie.name!] = newDie
-                
                 self.collectionView?.reloadData()
                 i = i+1
-                
             }
-            //map contents of cells
-            //apply function to create random values
-            //apply random values to mapped labels
-//            diceHolder.removeAll()
-//            self.collectionView?.reloadData()
         }
     }
     
