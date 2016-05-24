@@ -25,6 +25,7 @@ class DiceCollectionViewController: UICollectionViewController{
     func plusButtonTapped(){
         let newDie = Die()
         newDie.name = "Allen"
+        newDie.rollIt()
         diceHolder[newDie.name!] = newDie
     
     }
