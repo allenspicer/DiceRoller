@@ -43,12 +43,24 @@ class DiceCollectionViewController: UICollectionViewController{
     
      override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
-            diceHolder.removeAll()
+            //self.collectionView?.subviews.removeLast()
+           var i = 0
+            while (i < diceHolder.count){
             
+                let newDie = Die()
+            
+                newDie.name = "\(self.diceHolder.count)"
+                newDie.rollIt()
+                diceHolder["i"] = newDie
+                self.collectionView?.reloadData()
+                i = i+1
+                
+            }
             //map contents of cells
             //apply function to create random values
             //apply random values to mapped labels
-            self.collectionView?.reloadData()
+//            diceHolder.removeAll()
+//            self.collectionView?.reloadData()
         }
     }
     
@@ -56,7 +68,7 @@ class DiceCollectionViewController: UICollectionViewController{
     
     func plusButtonTapped(){
         let newDie = Die()
-        newDie.name = "Allen\(self.diceHolder.count)"
+        newDie.name = "\(self.diceHolder.count)"
         newDie.rollIt()
         diceHolder[newDie.name!] = newDie
         self.collectionView?.reloadData()
