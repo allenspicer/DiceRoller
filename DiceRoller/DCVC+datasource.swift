@@ -55,10 +55,10 @@ extension DiceCollectionViewController{
                 collectionView.dequeueReusableSupplementaryViewOfKind(kind,
                         withReuseIdentifier: "HeaderView",
                         forIndexPath: indexPath) as! HeaderView
-           headerView.headerLabel.text = "5D20"
-            //let keyArray = Array(self.diceHolder.keys)
-            //let selectedHeader = self.diceHolder[keyArray[indexPath.row]]
-          //headerView.headerLabel.text = selectedHeader!.section
+           // headerView.headerLabel.text = "5D20"
+            let keyArray = Array(self.diceHolder.keys)
+            let selectedHeader = self.diceHolder[keyArray[indexPath.row]]
+          headerView.headerLabel.text = selectedHeader!.section
             
             return headerView
         default:
