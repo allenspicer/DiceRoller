@@ -25,6 +25,7 @@ class Die: AnyObject {
     var faceValues:Array<Int> {return (1...face).toArray()}
     var currentValue = 0
     var name: String?
+    var section: String?
     
     init(){
         name = ""

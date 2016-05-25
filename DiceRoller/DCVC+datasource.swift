@@ -16,6 +16,10 @@ extension DiceCollectionViewController{
         return self.diceHolder.count
     }
     
+    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("dieCell", forIndexPath: indexPath)
         
@@ -40,7 +44,15 @@ extension DiceCollectionViewController{
     }
     
     
-    
+    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        
+        let sectionHeaderView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "sectionTitle", forIndexPath: indexPath) as UICollectionReusableView
+        
+        let label = UILabel(frame: sectionHeaderView.bounds)
+        label.text = "Title"
+        return sectionHeaderView
+        
+    }
 
     
 }
