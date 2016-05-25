@@ -6,8 +6,12 @@
 //  Copyright © 2016 Allen Spicer. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class HeaderView: UICollectionReusableView {
 
+    @IBOutlet weak var headerLabel: UILabel!
+    
+    
+    
 }
