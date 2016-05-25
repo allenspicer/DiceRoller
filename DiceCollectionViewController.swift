@@ -14,26 +14,17 @@ class DiceCollectionViewController: UICollectionViewController{
     
     
     var diceHolder : Dictionary<String,Die> = Dictionary()
-    var oldLayout: UICollectionViewLayout?
-    var newLayout: UICollectionViewLayout?
+//    var oldLayout: UICollectionViewLayout?
+//    var newLayout: UICollectionViewLayout?
    // let motionManager: CMMotionManager = CMMotionManager?
     
     
     override func viewDidLoad() {
         let plusButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(plusButtonTapped))
-        let swapButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: #selector(swapButtonTapped))
+       // let swapButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: #selector(swapButtonTapped))
         
-        let newFlowLayout = UICollectionViewFlowLayout()
-        newFlowLayout.minimumInteritemSpacing = 20
-        newFlowLayout.minimumLineSpacing = 20
-        oldLayout = self.collectionView?.collectionViewLayout
-        newLayout = newFlowLayout
-
-        
-        self.collectionView?.collectionViewLayout = newFlowLayout
         navigationItem.rightBarButtonItem = plusButton
-        self.navigationItem.leftBarButtonItem = swapButton
-        
+       // self.navigationItem.leftBarButtonItem = swapButton
         
     }
     
@@ -67,13 +58,13 @@ class DiceCollectionViewController: UICollectionViewController{
         self.collectionView?.reloadData()
     }
     
-    func swapButtonTapped(){
+//    func swapButtonTapped(){
 //        if self.collectionView?.collectionViewLayout == oldLayout{
 //            self.collectionView?.collectionViewLayout = newLayout!
 //        }else{
 //            self.collectionView?.collectionViewLayout = oldLayout
 //        }
 //        self.collectionView?.reloadData()
-    }
+//    }
     
 }
