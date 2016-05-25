@@ -58,20 +58,17 @@ extension DiceCollectionViewController{
     override func collectionView(collectionView: UICollectionView,
                                  viewForSupplementaryElementOfKind kind: String,
                                 atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        //1
         switch kind {
-        //2
         case UICollectionElementKindSectionHeader:
-            //3
             let headerView =
                 collectionView.dequeueReusableSupplementaryViewOfKind(kind,
                         withReuseIdentifier: "HeaderView",
                         forIndexPath: indexPath) as! HeaderView
             headerView.headerLabel.text = "5D20"
+            
            // headerView.label.text = searches[indexPath.section].searchTerm
             return headerView
         default:
-            //4
             assert(false, "Unexpected element kind")
         }
     }
