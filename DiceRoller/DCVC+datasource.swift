@@ -44,12 +44,11 @@ extension DiceCollectionViewController{
     //grab each cell and change properties
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("dieCell", forIndexPath: indexPath)
-     cell.subviews.count
         let label =  UILabel(frame: cell.bounds)
-        let selectedDie = self.diceHolder[String(cell.subviews.count)]
-        
-        
-       //label.text = String(selectedDie.currentValue)
+        let selectedSection = self.diceHolder[indexPath.section]
+        let selectedDie = selectedSection[indexPath.row]
+
+       label.text = String(selectedDie.currentValue)
         label.layer.cornerRadius = 10
         label.layer.borderWidth = 1
         label.layer.borderColor = (UIColor.blackColor().CGColor)
