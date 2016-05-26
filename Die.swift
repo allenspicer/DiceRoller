@@ -16,6 +16,7 @@ class Die: AnyObject {
     var currentValue: Int = 0
    var name: String = ""
     var section: String = ""
+    var number: Int = 0
     
     
     func rollIt(){

@@ -17,7 +17,7 @@ var diceHolder : Dictionary<String,Die> = Dictionary()
     
 override func viewDidLoad() {
     var i = 0
-    while (i < 20){
+    while ( i < 20){
         newDieNeeded()
         i = i+1
     }
