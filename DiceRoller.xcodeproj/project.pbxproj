@@ -13,7 +13,6 @@
 		9FB769D91CF499BC00FF6CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB769D71CF499BC00FF6CFF /* LaunchScreen.storyboard */; };
 		9FB769E11CF49A9100FF6CFF /* DiceCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB769E01CF49A9100FF6CFF /* DiceCollectionViewController.swift */; };
 		9FB769E51CF49CE000FF6CFF /* Die.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB769E41CF49CE000FF6CFF /* Die.swift */; };
-		9FB769E71CF4A23A00FF6CFF /* DCVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB769E61CF4A23A00FF6CFF /* DCVC+Delegate.swift */; };
 		9FB769E91CF4A78A00FF6CFF /* DCVC+datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB769E81CF4A78A00FF6CFF /* DCVC+datasource.swift */; };
 		9FB769EB1CF53C9B00FF6CFF /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB769EA1CF53C9B00FF6CFF /* HeaderView.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 		9FB769DA1CF499BC00FF6CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FB769E01CF49A9100FF6CFF /* DiceCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiceCollectionViewController.swift; path = ../DiceCollectionViewController.swift; sourceTree = "<group>"; };
 		9FB769E41CF49CE000FF6CFF /* Die.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Die.swift; path = ../Die.swift; sourceTree = "<group>"; };
-		9FB769E61CF4A23A00FF6CFF /* DCVC+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DCVC+Delegate.swift"; sourceTree = "<group>"; };
 		9FB769E81CF4A78A00FF6CFF /* DCVC+datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DCVC+datasource.swift"; sourceTree = "<group>"; };
 		9FB769EA1CF53C9B00FF6CFF /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,7 +80,6 @@
 		9FB769CD1CF499BC00FF6CFF /* DiceRoller */ = {
 			isa = PBXGroup;
 			children = (
-				9FB769E61CF4A23A00FF6CFF /* DCVC+Delegate.swift */,
 				9F226A911CF7764B0013D078 /* Model */,
 				9F226A921CF7765F0013D078 /* View */,
 				9FB769D51CF499BC00FF6CFF /* Assets.xcassets */,
@@ -164,7 +161,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FB769E71CF4A23A00FF6CFF /* DCVC+Delegate.swift in Sources */,
 				9FB769EB1CF53C9B00FF6CFF /* HeaderView.swift in Sources */,
 				9FB769E91CF4A78A00FF6CFF /* DCVC+datasource.swift in Sources */,
 				9FB769CF1CF499BC00FF6CFF /* AppDelegate.swift in Sources */,

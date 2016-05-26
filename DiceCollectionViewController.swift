@@ -60,30 +60,50 @@ override func viewDidLoad() {
     
 }
 
-
-
-
-
-
-
-       // self.collectionView?.reloadData()
     
     
 override func canBecomeFirstResponder() -> Bool {
         return true
     }
     
-//override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-//        if motion == .MotionShake {
-//           var i = 0
-//            while (i < diceHolder.count){
-//            
-//                let newDie = Die()
-//                newDie.name = "\(i)"
-//                newDie.rollIt()
-//                diceHolder[newDie.name] = newDie
-//                self.collectionView?.reloadData()
-//                i = i+1
-//            }
-//        }
-    }
+override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            
+            
+
+//            diceHolder[1]
+//            diceHolder[2]
+//            diceHolder[3]
+//                    let selectedDie = selectedSection[indexPath.row]
+            
+            
+            i = 0
+                while i < 5 {
+                    diceHolder[0][i].currentValue = Int(arc4random_uniform(UInt32(4)))
+                    i = i+1
+                }
+            i = 0
+            while i < 6 {
+                diceHolder[1][i].currentValue = Int(arc4random_uniform(UInt32(6)))
+                i = i+1
+            }
+            i = 0
+            while i < 3 {
+                diceHolder[2][i].currentValue = Int(arc4random_uniform(UInt32(10)))
+                i = i+1
+            }
+            i = 0
+            while i < 5 {
+                diceHolder[3][i].currentValue = Int(arc4random_uniform(UInt32(20)))
+                i = i+1
+            }
+
+                diceHolder = [d4Array, d6Array, d10Array, d20Array]
+                self.collectionView?.reloadData()
+                
+        }
+            
+
+
+        }
+}

@@ -18,10 +18,7 @@ class Die: AnyObject {
     var section: String = ""
     var number: Int = 0
     
-    
-    func rollIt(){
-        currentValue = Int(arc4random_uniform(UInt32(face)))
-    }
+
     
 
 }

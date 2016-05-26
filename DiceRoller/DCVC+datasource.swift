@@ -39,8 +39,6 @@ extension DiceCollectionViewController{
     }
     
     
-    
-    
     //grab each cell and change properties
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("dieCell", forIndexPath: indexPath)
