@@ -19,7 +19,7 @@ class Die: AnyObject {
     
     
     func rollIt(){
-        currentValue = faceValues[Int(arc4random_uniform(UInt32(face)))]
+        currentValue = Int(arc4random_uniform(UInt32(face)))
     }
     
 

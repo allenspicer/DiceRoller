@@ -38,17 +38,26 @@ extension DiceCollectionViewController{
         return 4
     }
     
+    
+    
+    
     //grab each cell and change properties
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("dieCell", forIndexPath: indexPath)
         
-        
+//        //take the dictionary of string-Die pairs
+//        //take just the strings and put them into an array called keyarray
 //        let keyArray = Array(self.diceHolder.keys)
+//        
+//        //use the indexpath to located the correct key and plug it into the dictionary
+//        //create local varaible which holds this instance of the die
 //        let selectedDie = self.diceHolder[keyArray[indexPath.row]]
+//        
         
         let label =  UILabel(frame: cell.bounds)
+        label.text = String(diceHolder)
         
-//        label.text = String(selectedDie!.currentValue)
+      //  label.text = String(selectedDie!.currentValue)
         label.layer.cornerRadius = 10
         label.layer.borderWidth = 1
         label.layer.borderColor = (UIColor.blackColor().CGColor)

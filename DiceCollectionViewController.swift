@@ -16,8 +16,21 @@ var diceHolder : Dictionary<String,Die> = Dictionary()
 
     
 override func viewDidLoad() {
-
-        
+    var i = 0
+    while (i < 20){
+        newDieNeeded()
+        i = i+1
+    }
+    
+    }
+    
+    
+func newDieNeeded(){
+        let newDie = Die()
+        newDie.name = "\(self.diceHolder.count)"
+        newDie.rollIt()
+        diceHolder[newDie.name] = newDie
+        self.collectionView?.reloadData()
     }
     
 override func canBecomeFirstResponder() -> Bool {
@@ -26,7 +39,6 @@ override func canBecomeFirstResponder() -> Bool {
     
 override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
-            //self.collectionView?.subviews.removeLast()
            var i = 0
             while (i < diceHolder.count){
             
