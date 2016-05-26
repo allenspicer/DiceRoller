@@ -12,11 +12,19 @@ class HeaderView: UICollectionReusableView {
 
     @IBOutlet weak var headerLabel: UILabel!
     
+    var title:String = ""
     
-    var title = "5 Die 4 Sides"
-    var title2 = "6 Die 6 Sides"
-    var title3 = "3 Dies 10 Sides"
-    var title4 = "5 Die 20 Sides"
+    enum title:String {
+        case a = "5 Die 4 Sides"
+        
+        case b = "6 Die 6 Sides"
+        
+        case c = "3 Dies 10 Sides"
+        
+        case d = "5 Die 20 Sides"
+    }
     
+    
+
     
 }

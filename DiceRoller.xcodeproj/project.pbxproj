@@ -43,6 +43,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F226A911CF7764B0013D078 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FB769E41CF49CE000FF6CFF /* Die.swift */,
+				9FB769E01CF49A9100FF6CFF /* DiceCollectionViewController.swift */,
+				9FB769E81CF4A78A00FF6CFF /* DCVC+datasource.swift */,
+				9FB769E61CF4A23A00FF6CFF /* DCVC+Delegate.swift */,
+				9FB769EA1CF53C9B00FF6CFF /* HeaderView.swift */,
+				9FB769CE1CF499BC00FF6CFF /* AppDelegate.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9F226A921CF7765F0013D078 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FB769D21CF499BC00FF6CFF /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		9FB769C21CF499BC00FF6CFF = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +83,8 @@
 		9FB769CD1CF499BC00FF6CFF /* DiceRoller */ = {
 			isa = PBXGroup;
 			children = (
-				9FB769CE1CF499BC00FF6CFF /* AppDelegate.swift */,
-				9FB769E41CF49CE000FF6CFF /* Die.swift */,
-				9FB769E61CF4A23A00FF6CFF /* DCVC+Delegate.swift */,
-				9FB769E81CF4A78A00FF6CFF /* DCVC+datasource.swift */,
-				9FB769E01CF49A9100FF6CFF /* DiceCollectionViewController.swift */,
-				9FB769EA1CF53C9B00FF6CFF /* HeaderView.swift */,
-				9FB769D21CF499BC00FF6CFF /* Main.storyboard */,
+				9F226A911CF7764B0013D078 /* Model */,
+				9F226A921CF7765F0013D078 /* View */,
 				9FB769D51CF499BC00FF6CFF /* Assets.xcassets */,
 				9FB769D71CF499BC00FF6CFF /* LaunchScreen.storyboard */,
 				9FB769DA1CF499BC00FF6CFF /* Info.plist */,

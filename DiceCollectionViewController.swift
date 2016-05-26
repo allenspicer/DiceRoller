@@ -12,27 +12,19 @@ import CoreMotion
 
 class DiceCollectionViewController: UICollectionViewController{
     
+var diceHolder : Dictionary<String,Die> = Dictionary()
+
     
-    var diceHolder : Dictionary<String,Die> = Dictionary()
-//    var oldLayout: UICollectionViewLayout?
-//    var newLayout: UICollectionViewLayout?
-   // let motionManager: CMMotionManager = CMMotionManager?
-    
-    
-    override func viewDidLoad() {
-        let plusButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(plusButtonTapped))
-       // let swapButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: #selector(swapButtonTapped))
-        
-        navigationItem.rightBarButtonItem = plusButton
-       // self.navigationItem.leftBarButtonItem = swapButton
+override func viewDidLoad() {
+
         
     }
     
-    override func canBecomeFirstResponder() -> Bool {
+override func canBecomeFirstResponder() -> Bool {
         return true
     }
     
-     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
             //self.collectionView?.subviews.removeLast()
            var i = 0
@@ -41,30 +33,13 @@ class DiceCollectionViewController: UICollectionViewController{
                 let newDie = Die()
                 newDie.name = "\(i)"
                 newDie.rollIt()
-                diceHolder[newDie.name!] = newDie
+                diceHolder[newDie.name] = newDie
                 self.collectionView?.reloadData()
                 i = i+1
             }
         }
     }
     
-    
-    
-    func plusButtonTapped(){
-        let newDie = Die()
-        newDie.name = "\(self.diceHolder.count)"
-        newDie.rollIt()
-        diceHolder[newDie.name!] = newDie
-        self.collectionView?.reloadData()
-    }
-    
-//    func swapButtonTapped(){
-//        if self.collectionView?.collectionViewLayout == oldLayout{
-//            self.collectionView?.collectionViewLayout = newLayout!
-//        }else{
-//            self.collectionView?.collectionViewLayout = oldLayout
-//        }
-//        self.collectionView?.reloadData()
-//    }
+
     
 }
