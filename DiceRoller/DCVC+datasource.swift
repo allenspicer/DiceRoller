@@ -67,8 +67,7 @@ extension DiceCollectionViewController{
     override func collectionView(collectionView: UICollectionView,
                                  viewForSupplementaryElementOfKind kind: String,
                                 atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        switch kind {
-        case UICollectionElementKindSectionHeader:
+
             let headerView =
                 collectionView.dequeueReusableSupplementaryViewOfKind(kind,
                         withReuseIdentifier: "HeaderView",
@@ -87,9 +86,7 @@ extension DiceCollectionViewController{
             }
 
             return headerView
-        default:
-            assert(false, "Unexpected element kind")
-        }
+
     }
 
     
